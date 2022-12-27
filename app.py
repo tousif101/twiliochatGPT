@@ -23,9 +23,10 @@ def sms_webhook():
     response_text = response.choices[0].text
 
     # Add a message
-    resp.message(response_text)
+    print(sender)
+    resp.message(to=sender,body=response_text, from_='+18304653338')
 
     return str(resp)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
