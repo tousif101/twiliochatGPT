@@ -2,9 +2,11 @@ import openai
 import twilio
 from twilio.twiml.messaging_response import MessagingResponse
 from flask import Flask, request, redirect
+import os
 
 app = Flask(__name__)
-openai_api_key="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"
+
+openai_api_key=os.environ.get('OPENAIKEY')
 # Set up the OpenAI API client
 openai.api_key = openai_api_key
 
