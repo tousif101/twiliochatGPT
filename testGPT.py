@@ -3,9 +3,9 @@ import twilio
 from twilio.twiml.messaging_response import MessagingResponse
 from flask import Flask, request, redirect
 
+openai_api_key="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"
 # Set up the OpenAI API client
 openai.api_key = openai_api_key
-
 
 # Set up a "webhook" to listen for incoming SMS messages
 @app.route("/sms", methods=['GET', 'POST'])
