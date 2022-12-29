@@ -42,11 +42,11 @@ def sms_webhook():
     print(sender)
     resp.message(to=sender,body=response_text, from_='+18304653338')
 
-    message = client.messages.create(
-                              body=response_text,
-                              from_='+18304653338',
-                              to=sender
-                          )
+    # message = client.messages.create(
+    #                           body=response_text,
+    #                           from_='+18304653338',
+    #                           to=sender
+    #                       )
 
     return str(resp)
 
