@@ -35,7 +35,7 @@ def sms_webhook():
     sender = request.form["From"]
     body = request.form["Body"]
 
-    response = openai.Completion.create(engine="text-davinci-002", prompt=body, max_tokens=1024)
+    response = openai.Completion.create(engine="text-davinci-003", prompt=body, max_tokens=1024)
     response_text = response.choices[0].text
 
     # Add a message
